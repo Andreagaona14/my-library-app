@@ -120,13 +120,13 @@ export class pila_libros{
  console.log(librosConDescuentos)  
  
 
-const descuentos = this.libros.map((Libros)=>{
+const descuentos =librosConDescuentos.map((Libros)=>{
      return{
          titulo: Libros.titulo,
          autor: Libros.autor,
          editorial: Libros.editorial,
          precio: Libros.precio,
-         descuentos: Libros.descuentos
+         Descuentos: Libros.descuento
      } })
  console.table(descuentos)
      }

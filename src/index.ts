@@ -17,6 +17,9 @@ function descuentos() : void {libreria.descuentos};
 function filtrar(): void {libreria.filtrar};
 function encadenados(): void {libreria.encadenados};
 function busquedas(): void {libreria.busquedas};
+function sort(): void {libreria.sort}
+
+
 const continuar: string ="si"; 
 while (continuar.toLocaleLowerCase() === "si") {
      const menu:string =  "Menu\n\n";
@@ -28,7 +31,7 @@ while (continuar.toLocaleLowerCase() === "si") {
      "6-busqueda libros"
      "Ingrese el  numero para ejecutar la funcion"
 
-     const decision:number =parseInt(prompt(menu) || "0");
+     let decision:number =parseInt(prompt(menu) || "0");
 
      switch (decision) {
           case 1:
@@ -51,6 +54,18 @@ while (continuar.toLocaleLowerCase() === "si") {
          libreria.eliminarLibro(titulo)
         break;
         case 4: 
-        interacciones()
-     }
+        interacciones();
+        descuentos();
+        break;
+        case 5:
+          filtrar();
+          encadenados();
+          sort();
+          break;
+          case 6:
+               busquedas();
+               break;
+               case 7:
+                    console.log ("Salida");
+          }
 }
